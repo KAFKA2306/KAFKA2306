@@ -1,16 +1,25 @@
-### Hi there 👋
+# KAFKA2306 (KAFKA)
 
-<!--
-**KAFKA2306/KAFKA2306** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 基本情報
+- **出身地**: 日本
+- **開始時期**: 2022年3月
+- **使用機器**: Pico4, RTX3060, SlimeVR, RVC
+- **アバター**: 薄荷, かなえ, ねこメイド
 
-Here are some ideas to get you started:
+## 興味・好み
+- **VRChat活動**:
+  - **定期イベント**: 化学のおはなし会, 新ケセド島, 謎めぐり, ML集会, DS集会VRC, 個人開発集会, OSS集会, VRC株式投資座談会, 朝ともダンス, SFN_vrc体操
+  - **不定期イベント**: VRC世界旅行, とびだせ海外集会, VRCシルエット, VRC_Elysionポーカー, プロンプト集会, VRCかなえちゃん集会, みゅうトーク集会
+- **好み**: ワールド巡り、謎解きワールド、ホラーワールド、ゲームワールド、フィットネス、Unity、少人数の集まり
+- **主催**: VRCみゅうトーク集会、VRCプロンプト集会、VRCかなえちゃん集会
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 技術スタック
+- **プログラミング**: Python, C#, Jupyter Notebook
+- **関心分野**: データ分析、機械学習、ファイナンス、ゲーム開発
+
+## コミュニティ活動
+GitHub上でのオープンソースプロジェクトへの貢献、特にファイナンスとデータサイエンス関連のプロジェクトに積極的に関わっています。また、VRChat内でのイベント主催を通じて、バーチャルコミュニティの活性化にも貢献しています。
+
+---
+
+© 2024 GitHub, Inc.
