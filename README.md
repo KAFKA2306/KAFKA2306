@@ -36,25 +36,15 @@ VRChat活動家、プログラマー、データアナリストとして活動�
 2. [mstr (Python)](https://github.com/KAFKA2306/mstr)
    - 機械学習を活用した高度なデータ分析プラットフォーム。ビッグデータから有意義な洞察を導き出します。
 
-3. [Swiss-Tournament-Manager](https://github.com/KAFKA2306/Swiss-Tournament-Manager)
-   - VRChatのJoinWars用トーナメント管理システム。公平で効率的な大会運営を実現。
-
-4. [VRPhotoJourney (C#)](https://github.com/KAFKA2306/VRPhotoJourney)
-   - VR空間での写真撮影と共有を革新的に改善するプロジェクト。思い出を新次元で記録。
 
 ## Recent Articles
 1. [🃏 ポーカーマスターへの道：6つのボードテクスチャ完全攻略ガイド](https://note.com/kafkavr/n/nd47e3ded67d8)
    - ポーカー戦略の核心に迫る、ボードテクスチャの徹底解説。勝率向上の秘訣を公開。
 
-2. [Tesla Optimusロボットと大規模言語モデル統合による市場インパクト](https://note.com/kafkavr/n/na22e8f497926)
-   - 最新技術の融合が生み出す、未来の高齢者ケアと医療革命の可能性を探る。
-
 3. [#JoinWars 第1回大会 優勝レポート](https://note.com/kafkavr/n/n87f1815317fd)
    - 戦略と実践の融合。VRChat大会での勝利を分析し、成功の鍵を解き明かす。
 
 ## Wishlist Highlights
-- [10Avatar 髪型『キャンディボブ/Candy Bob』](https://www.ginjake.net/home?id=1150362422437302272)
-- [【オリジナル3Dモデル】New NecoMaid](https://www.ginjake.net/home?id=1150362422437302272)
 - [【4アバター対応】秋彩スプラッシュ！【PB設定済み】](https://www.ginjake.net/home?id=1150362422437302272)
 
 ## Social Links
