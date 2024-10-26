@@ -36,7 +36,7 @@ VRChat活動家、プログラマー、データアナリストとして活動�
 2. [mstr (Python)](https://github.com/KAFKA2306/mstr)
    - 機械学習を活用した高度なデータ分析プラットフォーム。ビッグデータから有意義な洞察を導き出します。
 
-
+3. [kindle](https://githubrcugbk-3tlp--8080--34c588ed.local-credentialless.webcontainer.io/)
 ## Recent Articles
 1. [🃏 ポーカーマスターへの道：6つのボードテクスチャ完全攻略ガイド](https://note.com/kafkavr/n/nd47e3ded67d8)
    - ポーカー戦略の核心に迫る、ボードテクスチャの徹底解説。勝率向上の秘訣を公開。
