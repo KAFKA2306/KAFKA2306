@@ -160,6 +160,10 @@ Supabase / GitHub Actions / Cloudflare Workers / MCP / Unity / Blender / WSL2 / 
 
 ## ✍ Writing
 
+自筆
+
+- Note: https://note.com/kafkavr
+
 LLM出力
 
 - はてなブログ（お金・戦略・技術メモなど）  
