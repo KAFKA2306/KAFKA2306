@@ -11,6 +11,8 @@
 
 を、自分で本当に使いながら育てています。プロジェクトはすべて未完成です。
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e3cf75d9-a049-416a-943c-5f81bfa60c8d" />
+
 ---
 
 ## 🌱 About
