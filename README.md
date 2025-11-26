@@ -21,7 +21,8 @@
 - 🖥 Windows / WSL / PowerShell / タスクスケジューラなど、環境構築と自動起動をよくいじります  
 - 📚 ブログ・記事も書きます  
   - はてなブログ: https://kafkafinancialgroup.hatenablog.com/  
-  - Zenn: https://zenn.dev/kafka2306  
+  - Zenn: https://zenn.dev/kafka2306
+  - Note: https://note.com/kafkavr
 
 ---
 
