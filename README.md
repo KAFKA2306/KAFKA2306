@@ -86,8 +86,6 @@
 - **[etf](https://github.com/KAFKA2306/etf) / [m2](https://github.com/KAFKA2306/m2) / [oil](https://github.com/KAFKA2306/oil) / [fx](https://github.com/KAFKA2306/fx) / [irr](https://github.com/KAFKA2306/irr) / [skew](https://github.com/KAFKA2306/skew)**  
   ETF、マネーサプライ、商品、為替、投資案件評価、リスク指標などを扱う分析用リポジトリ群。
 
-- **[Year2035](https://github.com/KAFKA2306/Year2035)**  
-  数十年単位の資産形成・ライフプランを数値でシミュレーションするためのプロジェクト。
 
 ---
 
