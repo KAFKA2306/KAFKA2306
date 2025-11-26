@@ -27,7 +27,7 @@
 
 ## 🔹 Logging / Recording（行動・イベントの記録）
 
-ログや履歴データを集めて、「あとから読み返せる記録」に変えるプロジェクトです。
+ログや履歴データを集めて、「あとから読み返せる記録」に変えるプロジェクトです。（未完成）
 
 - **[vlog](https://github.com/KAFKA2306/vlog)**  
   VR のセッションを録音し、文字起こし → 要約 → データベース保存 → Web 表示までつなげた記録パイプライン。
@@ -48,7 +48,7 @@
 
 ## 🔹 Automation（繰り返し作業の自動化）
 
-日常的に発生する「同じパターンの作業」を、ワンコマンドで終わるようにしたプロジェクトです。
+日常的に発生する「同じパターンの作業」を、ワンコマンドで終わるようにしたプロジェクトです。（未完成）
 
 - **[2511youtuber](https://github.com/KAFKA2306/2511youtuber)**  
   台本生成・動画生成・サムネイル生成・アップロードまで、動画制作の手順を自動化したパイプライン。
@@ -72,7 +72,7 @@
 
 ## 🔹 Data / Finance（データの整理・可視化・モデル化）
 
-数値データを集めて、判断や検証に使える形に整えるプロジェクトです。
+数値データを集めて、判断や検証に使える形に整えるプロジェクトです。（未完成）
 
 - **[kakeibo](https://github.com/KAFKA2306/kakeibo)**  
   家計データを集計し、支出・収入の傾向を可視化するためのツール。
@@ -91,7 +91,7 @@
 
 ## 🔹 Cloud / Integration（外部サービスとの連携）
 
-外部サービスやアプリケーションプログラミングインターフェースと自作ツールをつなぐリポジトリです。
+外部サービスやアプリケーションプログラミングインターフェースと自作ツールをつなぐリポジトリです。（未完成）
 
 - **[kling](https://github.com/KAFKA2306/kling)**  
   動画生成サービスのアプリケーションプログラミングインターフェース クライアント。
@@ -99,23 +99,18 @@
 - **[ComfyUI-KLingAI-API](https://github.com/KAFKA2306/ComfyUI-KLingAI-API)**  
   ComfyUI から上記アプリケーションプログラミングインターフェースを呼び出すノード・ワークフロー。
 
-- **[mastramcp](https://github.com/KAFKA2306/mastramcp)**  
-  Model Context Protocol まわりの実装をまとめたリポジトリ。
-
 - **[UnityMCPforUbuntu22.04](https://github.com/KAFKA2306/UnityMCPforUbuntu22.04)**  
   Ubuntu 環境で Unity と Model Context Protocol を連携させるための設定・スクリプト。
 
 - **[tradermade_cfd](https://github.com/KAFKA2306/tradermade_cfd) / [jquants-api-quick-start](https://github.com/KAFKA2306/jquants-api-quick-start) / [rakuten_rss](https://github.com/KAFKA2306/rakuten_rss)**  
   金融データのアプリケーションプログラミングインターフェース 連携を行うリポジトリ群。
 
-- **[VRChat-bolt](https://github.com/KAFKA2306/VRChat-bolt)**  
-  Web 側から VR 関連データを扱う実験的な TypeScript プロジェクト。
 
 ---
 
 ## 🔹 VR / 3D / Avatar
 
-3D モデルやアバターの調整・可視化・モーションを扱うツールです。
+3D モデルやアバターの調整・可視化・モーションを扱うツールです。（未完成）
 
 - **[open-fitter](https://github.com/KAFKA2306/open-fitter)**  
   体型調整や変形処理などを扱うアバター向けツールチェーンのフォーク。
@@ -139,7 +134,7 @@
 
 ## 🔹 Android / Utilities
 
-日常の操作や開発体験を少し楽にするためのツールです。
+日常の操作や開発体験を少し楽にするためのツールです。（未完成）
 
 - **[launcher](https://github.com/KAFKA2306/launcher)**  
   Android 向けのホームアプリ。ショートカットやレコメンドなど、よく使うアクションにすぐアクセスできるランチャー。
