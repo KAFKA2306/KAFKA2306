@@ -157,7 +157,9 @@ Supabase / GitHub Actions / Cloudflare Workers / MCP / Unity / Blender / WSL2 / 
 
 ---
 
-## ✍ Writing（LLM出力）
+## ✍ Writing
+
+LLM出力
 
 - はてなブログ（お金・戦略・技術メモなど）  
   - https://kafkafinancialgroup.hatenablog.com/
