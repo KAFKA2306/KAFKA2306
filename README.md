@@ -4,6 +4,9 @@
 
 主な対象は、投資・企業分析、個人財務、VRChat、旅行、3Dアバター、画像生成、AIエージェント運用です。単発のデモより、**出典、データ、処理、成果物、公開状態、失敗履歴を追跡できる仕組み**を重視しています。
 
+<!-- ユーザー指定のプロフィール画像。README更新時も削除しないこと。 -->
+<img width="1024" height="1024" alt="KAFKA2306 profile image" src="https://github.com/user-attachments/assets/e3cf75d9-a049-416a-943c-5f81bfa60c8d" />
+
 > **主要言語:** Python / TypeScript / JavaScript / SQL / C# / PowerShell  
 > **主な環境:** Windows 11 / WSL2 / GitHub Actions / Cloudflare / GitHub Pages / Blender / Unity  
 > **運用方針:** READMEは人間向け、AGENTS.mdはAIエージェント向け、重要な作業状態はGitHubへ記録
