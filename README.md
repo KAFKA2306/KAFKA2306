@@ -13,38 +13,76 @@
 
 ---
 
-## リポジトリ・公開サイト
+## 公開サイト・Pages一覧
 
-各プロジェクトのRepositoryと、プロジェクトREADMEで確認した正準の公開サイトです。`—`は、公開URLを推測せずRepositoryのみを掲載していることを示します。
+2026年8月5日に、各RepositoryのREADMEと公開設定を横断確認した公開URL台帳です。
 
-| 分野 | プロジェクト | Repository | 公開サイト |
+- **正準**: 現在の主要な公開入口
+- **補助**: API、個別ビュー、ドキュメント、ミラー
+- **状態専用**: 分析や機能を停止し、状態・訂正だけを公開
+- **旧版・Snapshot**: 過去の試作、固定時点の研究成果、後継がある公開物
+
+公開URLが存在することと、データの鮮度・計算の正しさ・デプロイ内容が現在のmainと一致することは別です。各サイトの状態表示、取得時刻、出典、Repositoryを確認してください。
+
+### 正準の公開プロダクト
+
+| 分野 | Project | Repository | 公開入口 | 主な追加入口 |
+|---|---|---|---|---|
+| 投資・企業 | investor | [GitHub](https://github.com/KAFKA2306/investor) | [Investor](https://kafka2306.github.io/investor/) | — |
+| 投資研究 | investor2 | [GitHub](https://github.com/KAFKA2306/investor2) | [Evidence Dashboard](https://kafka2306.github.io/investor2/) | — |
+| 半導体 | semiconductor-earnings-model | [GitHub](https://github.com/KAFKA2306/semiconductor-earnings-model) | [Research Portal](https://kafka2306.github.io/semiconductor-earnings-model/) | [Resilience](https://kafka2306.github.io/semiconductor-earnings-model/resilience/) · [Earnings](https://kafka2306.github.io/semiconductor-earnings-model/earnings/) · [Model](https://kafka2306.github.io/semiconductor-earnings-model/model/) |
+| 定量研究 | CrewTrade | [GitHub](https://github.com/KAFKA2306/CrewTrade) | [Dashboard](https://kafka2306.github.io/CrewTrade/) | [Data Status](https://kafka2306.github.io/CrewTrade/data-status/) |
+| 賞与分析 | bonus | [GitHub](https://github.com/KAFKA2306/bonus) | [Bonus Dashboard](https://kafka2306.github.io/bonus/) | — |
+| アニメ | anime | [GitHub](https://github.com/KAFKA2306/anime) | [Year Catalogue](https://kafka2306.github.io/anime/) | [Explorer](https://kafka2306.github.io/anime/explore/) |
+| 旅行 | travel | [GitHub](https://github.com/KAFKA2306/travel) | [Wayweave](https://kafka2306.github.io/travel/) | [Planner](https://kafka2306.github.io/travel/planner/) · [Destinations](https://kafka2306.github.io/travel/destinations/) · [Guides](https://kafka2306.github.io/travel/guides/) |
+| VRChatイベント | vrc_cast_event_calender | [GitHub](https://github.com/KAFKA2306/vrc_cast_event_calender) | [Cloudflare Pages](https://vrc-cast-event-calender.pages.dev/) | [Tonight](https://vrc-cast-event-calender.pages.dev/tonight/) · [GitHub Pages mirror](https://kafka2306.github.io/vrc_cast_event_calender/) |
+| プロンプト・画像 | prompt-vault | [GitHub](https://github.com/KAFKA2306/prompt-vault) | [Cloudflare Pages](https://prompt-vault-cg3.pages.dev/) | [GitHub Pages mirror](https://kafka2306.github.io/prompt-vault/) |
+| BOOTH検索 | boothitemmanager | [GitHub](https://github.com/KAFKA2306/boothitemmanager) | [Cloudflare Pages](https://boothitemmanager.pages.dev/) | [AI tools](https://boothitemmanager.pages.dev/ai-tools.html) · [GitHub Pages mirror](https://kafka2306.github.io/boothitemmanager/) |
+| AIエージェント | agent-resources | [GitHub](https://github.com/KAFKA2306/agent-resources) | [Documentation](https://kafka2306.github.io/agent-resources/) | — |
+| ゲームデータ | pal-atlas | [GitHub](https://github.com/KAFKA2306/pal-atlas) | [PAL ATLAS](https://kafka2306.github.io/pal-atlas/) | [API index](https://kafka2306.github.io/pal-atlas/api/index.json) |
+| ボードゲーム補助 | bodogenomikata2 | [GitHub](https://github.com/KAFKA2306/bodogenomikata2) | [ボドゲのミカタ](https://bodogenomikata2.pages.dev/) | — |
+| ボードゲーム資料 | boardgamelist | [GitHub](https://github.com/KAFKA2306/boardgamelist) | [Rules Guide](https://kafka2306.github.io/boardgamelist/) | — |
+| ふるよに | furuyoni | [GitHub](https://github.com/KAFKA2306/furuyoni) | [ふるよに統合ガイド](https://kafka2306.github.io/furuyoni/) | — |
+| ブラウザゲーム | vrmine | [GitHub](https://github.com/KAFKA2306/vrmine) | [VRMine Game Hub](https://kafka2306.github.io/vrmine/) | [Answer Impostor](https://kafka2306.github.io/vrmine/games/answer-impostor/) · [深淵侵蝕](https://kafka2306.github.io/vrmine/games/abyss-invasion/) · [Stich-Meister](https://kafka2306.github.io/vrmine/games/stich-meister/) |
+| テクスチャ | magicaltexture | [GitHub](https://github.com/KAFKA2306/magicaltexture) | [Hugging Face Space](https://k4fka-magicaltexture.hf.space) | [Guide](https://kafka2306.github.io/magicaltexture/) |
+| 論文要約 | daily-arXiv-ai-enhanced | [GitHub](https://github.com/KAFKA2306/daily-arXiv-ai-enhanced) | [Daily arXiv](https://kafka2306.github.io/daily-arXiv-ai-enhanced/) | — |
+| ゲーム所蔵 | game-library-dashboard | [GitHub](https://github.com/KAFKA2306/game-library-dashboard) | [Game Library](https://kafka2306.github.io/game-library-dashboard/) | — |
+| 環境データ | cedar-pollen-bi | [GitHub](https://github.com/KAFKA2306/cedar-pollen-bi) | [Cedar Pollen BI](https://kafka2306.github.io/cedar-pollen-bi/) | — |
+| 市場季節性 | nk225seasonality | [GitHub](https://github.com/KAFKA2306/nk225seasonality) | [Nikkei 225 Dashboard](https://kafka2306.github.io/nk225seasonality/) | — |
+| 暗号資産 | option | [GitHub](https://github.com/KAFKA2306/option) | [Futures Report](https://kafka2306.github.io/option/) | — |
+| 税計算 | furutsatotax | [GitHub](https://github.com/KAFKA2306/furutsatotax) | [ふるさと納税計算](https://kafka2306.github.io/furutsatotax/) | — |
+
+### 研究資料・配信・固定Snapshot
+
+| 区分 | Project | Repository | 公開先 | 注意 |
+|---|---|---|---|---|
+| Podcast配信 | nlm | [GitHub](https://github.com/KAFKA2306/nlm) | [RSS feed](https://kafka2306.github.io/nlm/feed.xml) | CLI本体とは別にPodcast feedを公開 |
+| 経済Dashboard | m2 | [GitHub](https://github.com/KAFKA2306/m2) | [M2 Dashboard](https://kafka2306.github.io/m2/) | README記載の対象期間は2020–2025 |
+| 麻雀練習 | mj | [GitHub](https://github.com/KAFKA2306/mj) | [Solo Mahjong](https://kafka2306.github.io/mj/) | Browser training prototype |
+| Kaggle研究 | mitsuikaggle | [GitHub](https://github.com/KAFKA2306/mitsuikaggle) | [MkDocs](https://kafka2306.github.io/mitsuikaggle/) | 固定時点の競技・実験資料 |
+| Swing研究 | us-swing-strategy-bi-pages | [GitHub](https://github.com/KAFKA2306/us-swing-strategy-bi-pages) | [Static BI](https://kafka2306.github.io/us-swing-strategy-bi-pages/) | 2026年6月22日時点の再構成Snapshot |
+| Dominion計算 | DominionDeckDrawSimlator | [GitHub](https://github.com/KAFKA2306/DominionDeckDrawSimlator) | [Probability Calculator](https://kafka2306.github.io/DominionDeckDrawSimlator/) | 旧小規模ツール |
+| 衣装需要 | hitaiall | [GitHub](https://github.com/KAFKA2306/hitaiall) | [GitHub Pages](https://kafka2306.github.io/hitaiall/) · [Netlify](https://effulgent-pixie-ec7b1e.netlify.app/) · [Lovable preview](https://preview--hitaiallconnect.lovable.app/) | 複数の旧公開先が残る |
+| ルール検索 | rule-scribe-games | [GitHub](https://github.com/KAFKA2306/rule-scribe-games) | [Vercel](https://rule-scribe-games.vercel.app) | bodogenomikata2とは別系統の旧実装 |
+| Memory reader旧系統 | vlogrs | [GitHub](https://github.com/KAFKA2306/vlogrs) | [KafLog](https://kaflog.vercel.app) | 現行vlogの正準設計とは別系統 |
+
+### 状態専用・公開内容に注意が必要なページ
+
+| Project | Repository | 公開先 | 現在の扱い |
 |---|---|---|---|
-| 投資・企業 | investor | [GitHub](https://github.com/KAFKA2306/investor) | [GitHub Pages](https://kafka2306.github.io/investor/) |
-| 投資・企業 | investor2 | [GitHub](https://github.com/KAFKA2306/investor2) | [Evidence & Evolution Dashboard](https://kafka2306.github.io/investor2/) |
-| 半導体 | semiconductor-earnings-model | [GitHub](https://github.com/KAFKA2306/semiconductor-earnings-model) | [GitHub Pages](https://kafka2306.github.io/semiconductor-earnings-model/) · [財務耐久力比較](https://kafka2306.github.io/semiconductor-earnings-model/resilience/) |
-| 定量研究 | CrewTrade | [GitHub](https://github.com/KAFKA2306/CrewTrade) | [公開ダッシュボード](https://kafka2306.github.io/CrewTrade/) · [データ基盤状態](https://kafka2306.github.io/CrewTrade/data-status/) |
-| 賞与分析 | bonus | [GitHub](https://github.com/KAFKA2306/bonus) | [GitHub Pages](https://kafka2306.github.io/bonus/) |
-| 個人財務 | WealthAudit | [GitHub](https://github.com/KAFKA2306/WealthAudit) | — |
-| Human Memory | vlog | [GitHub](https://github.com/KAFKA2306/vlog) | — |
-| VRChatイベント | vrc_cast_event_calender | [GitHub](https://github.com/KAFKA2306/vrc_cast_event_calender) | [Cloudflare Pages](https://vrc-cast-event-calender.pages.dev/) · [GitHub Pages](https://kafka2306.github.io/vrc_cast_event_calender/) |
-| 3D衣装制作 | image2outfit | [GitHub](https://github.com/KAFKA2306/image2outfit) | — |
-| 旅行 | travel | [GitHub](https://github.com/KAFKA2306/travel) | [Wayweave](https://kafka2306.github.io/travel/) · [Planner](https://kafka2306.github.io/travel/planner/) |
-| プロンプト・画像 | prompt-vault | [GitHub](https://github.com/KAFKA2306/prompt-vault) | [Cloudflare Pages](https://prompt-vault-cg3.pages.dev/) · [GitHub Pages](https://kafka2306.github.io/prompt-vault/) |
-| AIエージェント | agent-resources | [GitHub](https://github.com/KAFKA2306/agent-resources) | [ドキュメント](https://kafka2306.github.io/agent-resources/) |
-| BOOTH検索 | boothitemmanager | [GitHub](https://github.com/KAFKA2306/boothitemmanager) | [Cloudflare Pages](https://boothitemmanager.pages.dev/) · [GitHub Pages](https://kafka2306.github.io/boothitemmanager/) |
-| ゲームデータ | pal-atlas | [GitHub](https://github.com/KAFKA2306/pal-atlas) | [PAL ATLAS](https://kafka2306.github.io/pal-atlas/) |
-| ボードゲーム | bodogenomikata2 | [GitHub](https://github.com/KAFKA2306/bodogenomikata2) | [ボドゲのミカタ](https://bodogenomikata2.pages.dev/) |
-| 横断管理 | com | [GitHub](https://github.com/KAFKA2306/com) | — |
+| nonfarmpayroll | [GitHub](https://github.com/KAFKA2306/nonfarmpayroll) | [GitHub Pages](https://kafka2306.github.io/nonfarmpayroll/) | Repositoryでは分析利用不可・status-onlyへ訂正済み。公開キャッシュが旧分析を表示する場合は不整合として扱う |
+| irr | [GitHub](https://github.com/KAFKA2306/irr) | 公開状態ページを運用 | e-Stat次元の検証完了まで本番分析停止。Repository READMEを正準として確認 |
 
-### よく使う公開画面
+### 公開API・データ入口
 
-- [Investor](https://kafka2306.github.io/investor/)
-- [半導体企業の財務耐久力比較](https://kafka2306.github.io/semiconductor-earnings-model/resilience/)
-- [CrewTrade データ基盤状態](https://kafka2306.github.io/CrewTrade/data-status/)
-- [今夜のVRChatイベント](https://vrc-cast-event-calender.pages.dev/tonight/)
-- [Wayweave Planner](https://kafka2306.github.io/travel/planner/)
-- [Prompt Vault](https://prompt-vault-cg3.pages.dev/)
-- [BOOTH AI関連ツール証拠リンク集](https://boothitemmanager.pages.dev/ai-tools.html)
+- [Semiconductor Financial Database v3 JSON](https://kafka2306.github.io/semiconductor-earnings-model/api/v3/financial-database/index.json)
+- [Semiconductor Financial Database v3 SQLite](https://kafka2306.github.io/semiconductor-earnings-model/api/v3/financial-database/financial.db)
+- [Semiconductor Research API v2](https://kafka2306.github.io/semiconductor-earnings-model/api/v2/semiconductor-research/index.json)
+- [PAL ATLAS Pal catalog](https://kafka2306.github.io/pal-atlas/api/pals.json)
+- [PAL ATLAS breeding pairs](https://kafka2306.github.io/pal-atlas/api/breeding.json)
+- [VRChat Event JSON](https://vrc-cast-event-calender.pages.dev/events.json)
+- [VRChat Event calendar](https://vrc-cast-event-calender.pages.dev/calendar.ics)
+- [VRChat Event health](https://vrc-cast-event-calender.pages.dev/health.json)
 
 ---
 
@@ -218,4 +256,4 @@ PRが作られたこと、CIが通ったこと、公開URLが存在すること�
 
 ---
 
-**プロフィールREADME実体監査:** 2026年8月5日
+**プロフィールREADME・公開URL台帳監査:** 2026年8月5日
