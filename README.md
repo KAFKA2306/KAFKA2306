@@ -1,174 +1,183 @@
-# 👋 Hi, I'm KAFKA
+# KAFKA2306
 
-日常の行動・会話・お金・VR の活動を  
-「記録して、整理して、また使えるようにするツール」としてコードにしています。
+実際に使うデータ、作業、記録、判断を、後から検証・再利用できる形へ変えるためのソフトウェアを作っています。
 
-- VR のセッションを録音して自動で日記化する仕組み
-- 動画・サムネ・台本の自動生成パイプライン
-- 家計・投資・経済指標を扱うデータ分析ツール
-- VRChat / 3D アバターまわりの補助ツール
-- Windows × WSL × PowerShell まわりの自動起動・環境構築スクリプト
+主な対象は、投資・企業分析、個人財務、VRChat、旅行、3Dアバター、画像生成、AIエージェント運用です。単発のデモより、**出典、データ、処理、成果物、公開状態、失敗履歴を追跡できる仕組み**を重視しています。
 
-を、自分で本当に使いながら育てています。
-
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e3cf75d9-a049-416a-943c-5f81bfa60c8d" />
+> **主要言語:** Python / TypeScript / JavaScript / SQL / C# / PowerShell  
+> **主な環境:** Windows 11 / WSL2 / GitHub Actions / Cloudflare / GitHub Pages / Blender / Unity  
+> **運用方針:** READMEは人間向け、AGENTS.mdはAIエージェント向け、重要な作業状態はGitHubへ記録
 
 ---
 
-## 🌱 About
+## 現在の中心テーマ
 
-- 🎮 VR / VRChat 周辺のログ収集・可視化・ツール作りが好きです  
-- 💰 個人の家計・投資・経済データを数字で整理する仕組みを作っています  
-- 🎥 「秒算マネー」などの動画制作を、自動生成パイプラインで回しています  
-- 🖥 Windows / WSL / PowerShell / タスクスケジューラなど、環境構築と自動起動をよくいじります  
-- 📚 ブログ・記事も書きます  
-  - はてなブログ: https://kafkafinancialgroup.hatenablog.com/  
-  - Zenn: https://zenn.dev/kafka2306
-  - Note: https://note.com/kafkavr
+## 1. 投資・企業・市場データ
 
----
+企業開示、財務数値、金利、為替、仮説、予測、バックテスト、公開ダッシュボードを、同じ値として混ぜずに管理します。
 
-## 🔹 Logging / Recording（行動・イベントの記録）
+- **[investor](https://github.com/KAFKA2306/investor)**  
+  投資研究、企業知識DB/API、金利・為替DB、証拠優先の公開画面を統合した研究基盤。
 
-ログや履歴データを集めて、「あとから読み返せる記録」に変えるプロジェクトです。
+- **[investor2](https://github.com/KAFKA2306/investor2)**  
+  企業業績予測と証拠ダッシュボードを扱う別系統の研究基盤。
+
+- **[semiconductor-earnings-model](https://github.com/KAFKA2306/semiconductor-earnings-model)**  
+  半導体企業の決算、業績モデル、比較、レジリエンス分析を扱うプロジェクト。
+
+- **[CrewTrade](https://github.com/KAFKA2306/CrewTrade)**  
+  定量研究を、目的、データ、評価、証拠、制約と一緒に公開する研究カタログ。
+
+- **[bonus](https://github.com/KAFKA2306/bonus)**  
+  日本企業の賞与、利益、従業員還元などを比較する公開分析。
+
+## 2. 個人財務
+
+- **[WealthAudit](https://github.com/KAFKA2306/WealthAudit)**  
+  収入、支出、資産、市場データから、実績と予測を分離した財務監査ダッシュボードを作るローカルワークスペース。
+
+実際の家計・資産データは公開リポジトリへ保存しません。コード、schema、テスト、サンプルと、個人データの保存先を分離します。
+
+## 3. VRChatの記録・イベント・体験
 
 - **[vlog](https://github.com/KAFKA2306/vlog)**  
-  VR のセッションを録音し、文字起こし → 要約 → データベース保存 → Web 表示までつなげた記録パイプライン。
+  音声、写真、会話、出来事、記憶、日記、公開物を区別して扱うHuman Memory Repository。
 
-- **[vrcplat](https://github.com/KAFKA2306/vrcplat)**  
-  VR 活動のログやセッション情報を集約し、ダッシュボードとして可視化するビューア。
+- **[vrc_cast_event_calender](https://github.com/KAFKA2306/vrc_cast_event_calender)**  
+  VRChatイベントを、日時、参加方法、公式リンク、カテゴリ、開催形式、分類根拠と一緒に案内する公開カレンダー。
 
-- **[vrcviewer](https://github.com/KAFKA2306/vrcviewer)**  
-  セッションログやスクリーンショットをブラウザから一覧できるビューア。
+- **[image2outfit](https://github.com/KAFKA2306/image2outfit)**  
+  参考画像から衣装アセットを制作し、Blender、FBX、Unity、Prefab、レンダリング証拠へつなぐ制作ライフサイクル。
 
-- **[trahist](https://github.com/KAFKA2306/trahist)**  
-  取引履歴（トレードログ）を読み込み、損益推移や統計を計算するツール。
+## 4. 旅行知識と行程設計
 
-- **[econalert](https://github.com/KAFKA2306/econalert)**  
-  経済指標やイベントの予定・結果を記録し、検証に使える形で管理するツール。
+- **[travel](https://github.com/KAFKA2306/travel)**  
+  行き先の発見、候補比較、保存済み旅程の編集、交通や入域条件の公式確認を分けた旅行知識プロダクト。
 
----
+公開画面: https://kafka2306.github.io/travel/
 
-## 🔹 Automation（繰り返し作業の自動化）
+## 5. プロンプト・画像・デザイン資産
 
-日常的に発生する「同じパターンの作業」を、ワンコマンドで終わるようにしたプロジェクトです。
+- **[prompt-vault](https://github.com/KAFKA2306/prompt-vault)**  
+  画像生成プロンプトを再利用可能なblockへ分解し、生成画像、来歴、用途、静的サイトと一緒に管理する保管庫。
 
-- **[2511youtuber](https://github.com/KAFKA2306/2511youtuber)**  
-  台本生成・動画生成・サムネイル生成・アップロードまで、動画制作の手順を自動化したパイプライン。
-
-- **[ytmanager](https://github.com/KAFKA2306/ytmanager)**  
-  動画のメタデータ管理・アップロード処理をまとめた運営ツール。
-
-- **[auto-invest](https://github.com/KAFKA2306/auto-invest)**  
-  投資のルールやロジックをコードとして定義し、再現できるようにしたリポジトリ。
+- **[agent-resources](https://github.com/KAFKA2306/agent-resources)**  
+  Claude Code、Codex、Cursorなどで使うエージェント用スキルと共通資源を配布・同期するCLI。
 
 - **[boothitemmanager](https://github.com/KAFKA2306/boothitemmanager)**  
-  商品データやメタ情報の管理をスクリプト化したツール。
-
-- **[PictureChangerTools](https://github.com/KAFKA2306/PictureChangerTools)**  
-  画像のサイズ変更・リネーム・一括変換など、面倒な作業をまとめて実行するツール。
-
-- **[daily-arXiv-ai-enhanced](https://github.com/KAFKA2306/daily-arXiv-ai-enhanced)**  
-  論文の取得 → 要約 → 公開までを自動で行う情報収集フローのリポジトリ。
+  BOOTH商品の情報、比較、来歴、公開カタログを管理するツール。
 
 ---
 
-## 🔹 Data / Finance（データの整理・可視化・モデル化）
+## リポジトリの読み方
 
-数値データを集めて、判断や検証に使える形に整えるプロジェクトです。
+リポジトリごとに、READMEを人間向けの正準入口として整備しています。
 
-- **[kakeibo](https://github.com/KAFKA2306/kakeibo)**  
-  家計データを集計し、支出・収入の傾向を可視化するためのツール。
+READMEでは、原則として次を説明します。
 
-- **[finBI](https://github.com/KAFKA2306/finBI)**  
-  金融データを扱うダッシュボードと分析ロジックをまとめたリポジトリ。
+- 何を解決するリポジトリか
+- 現在できること
+- 公開URLまたは実行方法
+- 正準データと生成物
+- セットアップと主要コマンド
+- テスト、CI、公開確認
+- セキュリティと公開境界
+- 既知の制約、未完了、停止中の機能
 
-- **[financeLLM](https://github.com/KAFKA2306/financeLLM)**  
-  ニュースやテキスト情報と株価データを組み合わせて分析する実験用リポジトリ。
-
-- **[etf](https://github.com/KAFKA2306/etf) / [m2](https://github.com/KAFKA2306/m2) / [oil](https://github.com/KAFKA2306/oil) / [fx](https://github.com/KAFKA2306/fx) / [irr](https://github.com/KAFKA2306/irr) / [skew](https://github.com/KAFKA2306/skew)**  
-  ETF、マネーサプライ、商品、為替、投資案件評価、リスク指標などを扱う分析用リポジトリ群。
-
-
----
-
-## 🔹 Cloud / Integration（外部サービスとの連携）
-
-外部サービスやアプリケーションプログラミングインターフェースと自作ツールをつなぐリポジトリです。
-
-- **[kling](https://github.com/KAFKA2306/kling)**  
-  動画生成サービスのアプリケーションプログラミングインターフェース クライアント。
-
-- **[ComfyUI-KLingAI-API](https://github.com/KAFKA2306/ComfyUI-KLingAI-API)**  
-  ComfyUI から上記アプリケーションプログラミングインターフェースを呼び出すノード・ワークフロー。
-
-- **[UnityMCPforUbuntu22.04](https://github.com/KAFKA2306/UnityMCPforUbuntu22.04)**  
-  Ubuntu 環境で Unity と Model Context Protocol を連携させるための設定・スクリプト。
-
-- **[tradermade_cfd](https://github.com/KAFKA2306/tradermade_cfd) / [jquants-api-quick-start](https://github.com/KAFKA2306/jquants-api-quick-start) / [rakuten_rss](https://github.com/KAFKA2306/rakuten_rss)**  
-  金融データのアプリケーションプログラミングインターフェース 連携を行うリポジトリ群。
-
+`AGENTS.md`がある場合、そこにはAIエージェントが変更時に守る操作順序、禁止事項、完了条件を記録します。人間が全体を理解するためにAGENTS.mdを先に読む必要はありません。
 
 ---
 
-## 🔹 VR / 3D / Avatar
+## 横断管理
 
-3D モデルやアバターの調整・可視化・モーションを扱うツールです。
+- **[com](https://github.com/KAFKA2306/com)**  
+  複数リポジトリにまたがる指示、方針、意思決定、定期サービス、障害、完了証拠を管理するcommand repository。
 
-- **[open-fitter](https://github.com/KAFKA2306/open-fitter)**  
-  体型調整や変形処理などを扱うアバター向けツールチェーンのフォーク。
+日常の入口はChatGPTです。重要な仕事は会話だけに残さず、GitHubのIssue、PR、commit、CI、公開URL、一次情報へ接続します。
 
-- **[blendshapedeformer](https://github.com/KAFKA2306/blendshapedeformer)**  
-  BlendShape を使った変形やエクスポートのためのツール。
+```text
+自然言語の指示
+  → 対象と受入条件を明確化
+  → Issue / branch / PR
+  → test / CI / runtime / Pagesを検証
+  → 証拠を記録
+  → 条件を満たした場合のみ完了
+```
 
-- **[bpyutils](https://github.com/KAFKA2306/bpyutils)**  
-  Blender の Python API を扱うときのユーティリティスクリプト集。
-
-- **[molecularshader](https://github.com/KAFKA2306/molecularshader)**  
-  分子構造を表示するためのシェーダーや表示まわりのコード。
-
-- **[dancer](https://github.com/KAFKA2306/dancer)**  
-  モーションや譜面データを扱う実験的リポジトリ。
-
-- **[vmatch2](https://github.com/KAFKA2306/vmatch2) / [vmatching](https://github.com/KAFKA2306/vmatching)**  
-  イベントやプレイヤー情報を整理・マッチングするツール。
+PRが作られたこと、CIが通ったこと、公開URLが存在することは、それぞれ別の証拠です。一つだけを見て全体完了とは判断しません。
 
 ---
 
-## 🔹 Android / Utilities
+## 開発で重視していること
 
-日常の操作や開発体験を少し楽にするためのツールです。
+### 一次情報と来歴
 
-- **[launcher](https://github.com/KAFKA2306/launcher)**  
-  Android 向けのホームアプリ。ショートカットやレコメンドなど、よく使うアクションにすぐアクセスできるランチャー。
+数値、仕様、日付、公開状態は、可能な限り公式資料、API、raw response、取得時刻、hashへ接続します。
 
-- **[readable-github](https://github.com/KAFKA2306/readable-github)**  
-  GitHub の画面を読みやすくするカスタマイズ・スクリプト。
+### 実績と予測の分離
+
+観測値、派生値、モデル予測、LLMによる解釈、実行結果を同じ欄へ混ぜません。
+
+### 人間が確認できる成果物
+
+テスト結果だけでなく、必要に応じて次を残します。
+
+- 公開URL
+- data table
+- screenshot
+- render
+- multi-view画像
+- workflow run
+- commit SHA
+- source URL
+
+### 失敗を消さない
+
+壊れた公開物、古いデータ、誤った計算、環境不足は、成功したように書き換えずIncident、警告、制約として記録します。
+
+### 自動化の境界
+
+自動処理は、判断の根拠や利用者の目的を置き換えるものではありません。scheduler、GitHub Actions、ローカルruntime、AIエージェントは交換可能な実行手段として扱います。
 
 ---
 
-## 🛠 Tech Stack
+## 技術領域
 
-**Languages**  
-Python / TypeScript / Kotlin / C# / C++ / Rust / Bash / PowerShell
+| 領域 | 主な技術 |
+|---|---|
+| Data / ML | Python, pandas, PyTorch, scikit-learn, Optuna, MLflow |
+| Web | TypeScript, React, Vite, HTML, CSS, Cloudflare, GitHub Pages |
+| Database | PostgreSQL, PostGIS, Supabase, SQLite |
+| Agent / Automation | ChatGPT, Codex, Claude Code, GitHub Actions, Taskfile, PowerShell |
+| VR / 3D | VRChat, Blender, Unity, Modular Avatar |
+| Local AI | WSL2, CUDA, llama.cpp, GGUF |
 
-**Focus Areas**  
-Logging / Data Engineering / Automation / Web Frontend / Backend / VR / 3D
-
-**Tools / Platforms**  
-Supabase / GitHub Actions / Cloudflare Workers / MCP / Unity / Blender / WSL2 / Windows Task Scheduler
+この一覧は、すべてのリポジトリが同じstackを使うという意味ではありません。各READMEとlockfileを現在の依存関係の正準として確認してください。
 
 ---
 
-## ✍ Writing
+## 公開物・文章
 
-自筆
+- GitHub: https://github.com/KAFKA2306
+- はてなブログ: https://kafkafinancialgroup.hatenablog.com/
+- Scrapbox: https://scrapbox.io/kafka2512
+- Zenn: https://zenn.dev/kafka2306
+- YouTube: https://www.youtube.com/@byosan-money
+- BOOTH: https://studiokafka.booth.pm/
+- note: https://note.com/kafkavr
+- ボドゲのミカタ: https://bodoge-no-mikata.vercel.app/
 
-- Note: https://note.com/kafkavr
+文章や動画には、本人が直接書いたものと、LLMを使って生成・編集したものがあります。媒体ごとの説明と根拠を確認してください。
 
-LLM出力
+---
 
-- はてなブログ（お金・戦略・技術メモなど）  
-  - https://kafkafinancialgroup.hatenablog.com/
-- Zenn（環境構築や実践ガイド系）  
-  - https://zenn.dev/kafka2306
+## 注意事項
+
+- 投資関連リポジトリは、投資助言、売買推奨、運用実績、将来収益の保証ではありません。
+- 旅行、イベント、価格、時刻、法令、API仕様などは変更されるため、利用直前に公式情報を再確認してください。
+- 公開リポジトリへAPIキー、token、認証情報、個人の家計、非公開会話などを保存しません。
+- forkやsource snapshotは、独自製品と区別し、上流、差分、利用目的、ライセンスを各READMEへ記載します。
+
+---
+
+**プロフィールREADME実体監査:** 2026年8月4日
