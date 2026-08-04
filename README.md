@@ -19,7 +19,6 @@
 
 - **正準**: 現在の主要な公開入口
 - **補助**: API、個別ビュー、ドキュメント、ミラー
-- **状態専用**: 分析や機能を停止し、状態・訂正だけを公開
 - **旧版・Snapshot**: 過去の試作、固定時点の研究成果、後継がある公開物
 
 公開URLが存在することと、データの鮮度・計算の正しさ・デプロイ内容が現在のmainと一致することは別です。各サイトの状態表示、取得時刻、出典、Repositoryを確認してください。
@@ -65,13 +64,6 @@
 | 衣装需要 | hitaiall | [GitHub](https://github.com/KAFKA2306/hitaiall) | [GitHub Pages](https://kafka2306.github.io/hitaiall/) · [Netlify](https://effulgent-pixie-ec7b1e.netlify.app/) · [Lovable preview](https://preview--hitaiallconnect.lovable.app/) | 複数の旧公開先が残る |
 | ルール検索 | rule-scribe-games | [GitHub](https://github.com/KAFKA2306/rule-scribe-games) | [Vercel](https://rule-scribe-games.vercel.app) | bodogenomikata2とは別系統の旧実装 |
 | Memory reader旧系統 | vlogrs | [GitHub](https://github.com/KAFKA2306/vlogrs) | [KafLog](https://kaflog.vercel.app) | 現行vlogの正準設計とは別系統 |
-
-### 状態専用・公開内容に注意が必要なページ
-
-| Project | Repository | 公開先 | 現在の扱い |
-|---|---|---|---|
-| nonfarmpayroll | [GitHub](https://github.com/KAFKA2306/nonfarmpayroll) | [GitHub Pages](https://kafka2306.github.io/nonfarmpayroll/) | Repositoryでは分析利用不可・status-onlyへ訂正済み。公開キャッシュが旧分析を表示する場合は不整合として扱う |
-| irr | [GitHub](https://github.com/KAFKA2306/irr) | 公開状態ページを運用 | e-Stat次元の検証完了まで本番分析停止。Repository READMEを正準として確認 |
 
 ### 公開API・データ入口
 
