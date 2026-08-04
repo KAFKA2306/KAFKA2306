@@ -13,6 +13,41 @@
 
 ---
 
+## リポジトリ・公開サイト
+
+各プロジェクトのRepositoryと、プロジェクトREADMEで確認した正準の公開サイトです。`—`は、公開URLを推測せずRepositoryのみを掲載していることを示します。
+
+| 分野 | プロジェクト | Repository | 公開サイト |
+|---|---|---|---|
+| 投資・企業 | investor | [GitHub](https://github.com/KAFKA2306/investor) | [GitHub Pages](https://kafka2306.github.io/investor/) |
+| 投資・企業 | investor2 | [GitHub](https://github.com/KAFKA2306/investor2) | [Evidence & Evolution Dashboard](https://kafka2306.github.io/investor2/) |
+| 半導体 | semiconductor-earnings-model | [GitHub](https://github.com/KAFKA2306/semiconductor-earnings-model) | [GitHub Pages](https://kafka2306.github.io/semiconductor-earnings-model/) · [財務耐久力比較](https://kafka2306.github.io/semiconductor-earnings-model/resilience/) |
+| 定量研究 | CrewTrade | [GitHub](https://github.com/KAFKA2306/CrewTrade) | [公開ダッシュボード](https://kafka2306.github.io/CrewTrade/) · [データ基盤状態](https://kafka2306.github.io/CrewTrade/data-status/) |
+| 賞与分析 | bonus | [GitHub](https://github.com/KAFKA2306/bonus) | [GitHub Pages](https://kafka2306.github.io/bonus/) |
+| 個人財務 | WealthAudit | [GitHub](https://github.com/KAFKA2306/WealthAudit) | — |
+| Human Memory | vlog | [GitHub](https://github.com/KAFKA2306/vlog) | — |
+| VRChatイベント | vrc_cast_event_calender | [GitHub](https://github.com/KAFKA2306/vrc_cast_event_calender) | [Cloudflare Pages](https://vrc-cast-event-calender.pages.dev/) · [GitHub Pages](https://kafka2306.github.io/vrc_cast_event_calender/) |
+| 3D衣装制作 | image2outfit | [GitHub](https://github.com/KAFKA2306/image2outfit) | — |
+| 旅行 | travel | [GitHub](https://github.com/KAFKA2306/travel) | [Wayweave](https://kafka2306.github.io/travel/) · [Planner](https://kafka2306.github.io/travel/planner/) |
+| プロンプト・画像 | prompt-vault | [GitHub](https://github.com/KAFKA2306/prompt-vault) | [Cloudflare Pages](https://prompt-vault-cg3.pages.dev/) · [GitHub Pages](https://kafka2306.github.io/prompt-vault/) |
+| AIエージェント | agent-resources | [GitHub](https://github.com/KAFKA2306/agent-resources) | [ドキュメント](https://kafka2306.github.io/agent-resources/) |
+| BOOTH検索 | boothitemmanager | [GitHub](https://github.com/KAFKA2306/boothitemmanager) | [Cloudflare Pages](https://boothitemmanager.pages.dev/) · [GitHub Pages](https://kafka2306.github.io/boothitemmanager/) |
+| ゲームデータ | pal-atlas | [GitHub](https://github.com/KAFKA2306/pal-atlas) | [PAL ATLAS](https://kafka2306.github.io/pal-atlas/) |
+| ボードゲーム | bodogenomikata2 | [GitHub](https://github.com/KAFKA2306/bodogenomikata2) | [ボドゲのミカタ](https://bodogenomikata2.pages.dev/) |
+| 横断管理 | com | [GitHub](https://github.com/KAFKA2306/com) | — |
+
+### よく使う公開画面
+
+- [Investor](https://kafka2306.github.io/investor/)
+- [半導体企業の財務耐久力比較](https://kafka2306.github.io/semiconductor-earnings-model/resilience/)
+- [CrewTrade データ基盤状態](https://kafka2306.github.io/CrewTrade/data-status/)
+- [今夜のVRChatイベント](https://vrc-cast-event-calender.pages.dev/tonight/)
+- [Wayweave Planner](https://kafka2306.github.io/travel/planner/)
+- [Prompt Vault](https://prompt-vault-cg3.pages.dev/)
+- [BOOTH AI関連ツール証拠リンク集](https://boothitemmanager.pages.dev/ai-tools.html)
+
+---
+
 ## 現在の中心テーマ
 
 ## 1. 投資・企業・市場データ
@@ -183,4 +218,4 @@ PRが作られたこと、CIが通ったこと、公開URLが存在すること�
 
 ---
 
-**プロフィールREADME実体監査:** 2026年8月4日
+**プロフィールREADME実体監査:** 2026年8月5日
