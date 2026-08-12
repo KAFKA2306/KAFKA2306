@@ -105,7 +105,9 @@ function Run-CodexTask([string]$TaskId, $Spec) {
     Write-BridgeLog "task=$TaskId cwd=$cwd sandbox=$sandbox starting"
     Push-Location $cwd
     try {
-        $promptText | & codex exec --ignore-user-config --sandbox $sandbox --json --output-last-message $lastMessage - 2>&1 |
+        # Keep autonomous runs independent from interactive Codex user config,
+        # app discovery, and plugin discovery. Interactive Codex is untouched.
+        $promptText | & codex exec --ignore-user-config --disable apps --disable plugins --sandbox $sandbox --json --output-last-message $lastMessage - 2>&1 |
             Tee-Object -FilePath $events | Out-Null
         $exitCode = $LASTEXITCODE
     }
@@ -182,7 +184,13 @@ while ($true) {
             catch {
                 $err = $_.Exception.Message
                 Write-BridgeLog "task=$taskId failed: $err"
-                Post-Comment "<!-- codex-bridge:v1 role=worker task=$taskId -->`n## Codex bridge error ``$taskId```n`n$err"
+                $errorBody = @"
+<!-- codex-bridge:v1 role=worker task=$taskId -->
+## Codex bridge error `$TaskId`
+
+$err
+"@
+                Post-Comment $errorBody
             }
             finally {
                 [void]$processed.Add($taskId)
