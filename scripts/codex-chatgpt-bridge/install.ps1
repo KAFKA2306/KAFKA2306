@@ -100,15 +100,19 @@ if ($LASTEXITCODE -ne 0) { throw "Cannot access $Repo issue #$Issue" }
 Write-Host '[5/9] Installing bridge files'
 $sourceDaemon = Join-Path $PSScriptRoot 'bridge-daemon.ps1'
 $sourceSupervisor = Join-Path $PSScriptRoot 'bridge-supervisor.ps1'
-if (-not (Test-Path -LiteralPath $sourceDaemon -PathType Leaf)) { throw "Missing $sourceDaemon" }
-if (-not (Test-Path -LiteralPath $sourceSupervisor -PathType Leaf)) { throw "Missing $sourceSupervisor" }
+$sourceSender = Join-Path $PSScriptRoot 'send-task.ps1'
+foreach ($source in @($sourceDaemon, $sourceSupervisor, $sourceSender)) {
+    if (-not (Test-Path -LiteralPath $source -PathType Leaf)) { throw "Missing $source" }
+}
 
 $runtimeRoot = Join-Path $env:LOCALAPPDATA 'OpenAI\CodexChatGPTBridge'
 New-Item -ItemType Directory -Force -Path $runtimeRoot | Out-Null
 $daemon = Join-Path $runtimeRoot 'bridge-daemon.ps1'
 $supervisor = Join-Path $runtimeRoot 'bridge-supervisor.ps1'
+$sender = Join-Path $runtimeRoot 'send-task.ps1'
 Copy-Item -LiteralPath $sourceDaemon -Destination $daemon -Force
 Copy-Item -LiteralPath $sourceSupervisor -Destination $supervisor -Force
+Copy-Item -LiteralPath $sourceSender -Destination $sender -Force
 
 $config = [ordered]@{
     repo = $Repo
@@ -185,4 +189,5 @@ Write-Host "Queue: https://github.com/$Repo/issues/$Issue"
 Write-Host "Runtime: $runtimeRoot"
 Write-Host "Scheduled task: $TaskName"
 Write-Host "Allowed root: $AllowedRoot"
-Write-Host 'Default task sandbox: read-only. Use sandbox=workspace-write only for tasks that must edit files.'
+Write-Host "Task sender: $sender"
+Write-Host 'Default task sandbox: read-only. Use workspace-write only for tasks that must edit files.'
