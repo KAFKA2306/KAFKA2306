@@ -81,6 +81,59 @@ function Get-GitEvidence([string]$Cwd) {
     return $e
 }
 
+function Get-RequestedMcpNames($Spec) {
+    if ($null -eq $Spec.PSObject.Properties['mcp']) { return @() }
+
+    $names = @($Spec.mcp | ForEach-Object { [string]$_ })
+    foreach ($name in $names) {
+        if ($name -ne 'youtube_music') { throw "Unsupported bridge MCP: $name" }
+    }
+    return $names
+}
+
+function ConvertTo-TomlLiteral([string]$Value) {
+    if ($Value.Contains("'")) { throw "MCP path cannot contain a single quote: $Value" }
+    return "'$Value'"
+}
+
+function Get-CodexMcpArgs($Spec) {
+    $names = @(Get-RequestedMcpNames $Spec)
+    if ($names.Count -eq 0) { return @() }
+
+    $args = @()
+    if ($names -contains 'youtube_music') {
+        $ytmRoot = Join-Path $env:LOCALAPPDATA 'OpenAI\YouTubeMusicMCP'
+        $pythonExe = Join-Path $ytmRoot '.venv\Scripts\python.exe'
+        $serverPath = Join-Path $ytmRoot 'server.py'
+        $tokenPath = Join-Path $ytmRoot 'token.json'
+
+        if (-not (Test-Path -LiteralPath $pythonExe -PathType Leaf)) {
+            throw "youtube_music MCP is not installed: $pythonExe"
+        }
+        if (-not (Test-Path -LiteralPath $serverPath -PathType Leaf)) {
+            throw "youtube_music MCP server is missing: $serverPath"
+        }
+        if (-not (Test-Path -LiteralPath $tokenPath -PathType Leaf)) {
+            throw "youtube_music OAuth is not configured: $tokenPath"
+        }
+
+        $commandValue = ConvertTo-TomlLiteral $pythonExe
+        $serverValue = ConvertTo-TomlLiteral $serverPath
+        $enabledTools = '["search_music","create_playlist","add_video_to_playlist","list_my_playlists","list_playlist_items"]'.Replace('\"', '"')
+        $approvalMode = 'mcp_servers.youtube_music.default_tools_approval_mode="approve"'.Replace('\"', '"')
+
+        $args += @(
+            '--config', "mcp_servers.youtube_music.command=$commandValue",
+            '--config', "mcp_servers.youtube_music.args=[$serverValue]",
+            '--config', 'mcp_servers.youtube_music.enabled=true',
+            '--config', 'mcp_servers.youtube_music.required=true',
+            '--config', "mcp_servers.youtube_music.enabled_tools=$enabledTools",
+            '--config', $approvalMode
+        )
+    }
+    return $args
+}
+
 function Run-CodexTask([string]$TaskId, $Spec) {
     if (-not $Spec.cwd -or -not $Spec.prompt) { throw 'Task JSON must contain cwd and prompt.' }
 
@@ -102,12 +155,29 @@ function Run-CodexTask([string]$TaskId, $Spec) {
     $promptText = [string]$Spec.prompt
     if ($promptText.Length -gt 60000) { throw 'prompt exceeds 60000 characters.' }
 
-    Write-BridgeLog "task=$TaskId cwd=$cwd sandbox=$sandbox starting"
+    $mcpNames = @(Get-RequestedMcpNames $Spec)
+    $mcpArgs = @(Get-CodexMcpArgs $Spec)
+    $mcpLog = if ($mcpNames.Count -gt 0) { $mcpNames -join ',' } else { 'none' }
+
+    Write-BridgeLog "task=$TaskId cwd=$cwd sandbox=$sandbox mcp=$mcpLog starting"
     Push-Location $cwd
     try {
         # Keep autonomous runs independent from interactive Codex user config,
         # app discovery, and plugin discovery. Interactive Codex is untouched.
-        $promptText | & codex exec --ignore-user-config --disable apps --disable plugins --sandbox $sandbox --json --output-last-message $lastMessage - 2>&1 |
+        # Only an explicitly requested, hard-coded MCP allowlist can be injected.
+        $codexArgs = @(
+            'exec',
+            '--ignore-user-config',
+            '--disable', 'apps',
+            '--disable', 'plugins',
+            '--sandbox', $sandbox
+        ) + $mcpArgs + @(
+            '--json',
+            '--output-last-message', $lastMessage,
+            '-'
+        )
+
+        $promptText | & codex @codexArgs 2>&1 |
             Tee-Object -FilePath $events | Out-Null
         $exitCode = $LASTEXITCODE
     }
@@ -123,6 +193,7 @@ function Run-CodexTask([string]$TaskId, $Spec) {
         task_id = $TaskId
         exit_code = $exitCode
         sandbox = $sandbox
+        mcp = @($mcpNames)
         cwd = $cwd
         git = $git
         finished_at = (Get-Date).ToUniversalTime().ToString('o')
