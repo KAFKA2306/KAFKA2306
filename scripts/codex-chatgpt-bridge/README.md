@@ -101,6 +101,21 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File $send `
 
 公開 bridge は `danger-full-access` を受け付けません。
 
+### 明示的なlocal MCP allowlist
+
+通常の autonomous run は従来どおり user config / apps / plugins から分離します。local MCP は deny-by-default で、daemon に hard-code された名前だけを task 単位で明示 opt-in できます。
+
+現在の allowlist は `youtube_music` のみです。導入手順は `../youtube-music-mcp/README.md` を参照してください。
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File $send `
+  -Prompt 'private playlistを作成し、曲を検索・確認して追加し、YouTube Music URLを返して' `
+  -Cwd 'D:\dev\example' `
+  -Mcp youtube_music
+```
+
+未知のMCP名は `send-task.ps1` と daemon の両方で拒否します。`mcp` opt-in がない task にはlocal MCPを公開しません。
+
 ## Queue protocol
 
 controller:
@@ -113,6 +128,12 @@ controller:
 ```
 ````
 
+allowlisted MCPを使う場合だけ optional `mcp` を加えます。
+
+```json
+{"cwd":"D:\\dev\\example","sandbox":"read-only","mcp":["youtube_music"],"prompt":"private playlistを作成してURLを返して"}
+```
+
 worker:
 
 ```md
@@ -123,6 +144,7 @@ worker result には次を含めます。
 
 - Codex exit code
 - sandbox
+- 明示的に有効化したMCP名
 - absolute cwd
 - Git repository root（取得可能な場合）
 - HEAD SHA（取得可能な場合）
@@ -142,14 +164,17 @@ raw JSONL event stream はローカル runtime directory にだけ保持しま�
 - sandbox は `read-only` / `workspace-write` のみ
 - 既定は `read-only`
 - autonomous run は `--ignore-user-config --disable apps --disable plugins` で interactive Codex の user config / app / plugin discovery から分離
+- local MCPはtask側の明示 `mcp` とdaemon側hard-coded allowlistの両方を満たす場合だけone-off `--config` で注入
+- `youtube_music` はlocal runtimeとOAuth tokenの存在を確認できない場合に起動を拒否
 - GitHub token や Codex credential を Issue comment へコピーしない
 - result text は 45,000 characters で上限を設ける
 - processed task ID はローカル state に保持し、最新 1,000 件に制限
 
-OpenAI Codex CLI の non-interactive mode は `codex exec` を提供し、sandbox を明示できます。公式ドキュメントを参照してください。
+OpenAI Codex CLI の non-interactive mode は `codex exec` を提供し、sandbox を明示できます。OpenAIのMCP設定は `enabled_tools` やtool approval policy、one-off `--config` overrideを提供しています。
 
-- https://developers.openai.com/codex/noninteractive
-- https://developers.openai.com/codex/cli/reference
+- https://learn.chatgpt.com/docs/non-interactive-mode
+- https://learn.chatgpt.com/docs/extend/mcp?surface=cli
+- https://learn.chatgpt.com/docs/config-file/config-advanced
 
 ## ChatGPT 側
 
@@ -202,13 +227,13 @@ Get-Content "$env:LOCALAPPDATA\OpenAI\CodexChatGPTBridge\logs\supervisor.log" -T
 
 ### MCP / app / plugin の認証で smoke test が落ちる
 
-bridge の autonomous run は interactive Codex の追加機能に依存しないよう、次を指定しています。
+通常taskでは次を維持します。
 
 ```text
 --ignore-user-config --disable apps --disable plugins
 ```
 
-interactive Codex の設定自体は変更しません。
+interactive Codex の設定自体は変更しません。`youtube_music` はtask JSONで明示した場合だけone-off configとして追加されます。
 
 ## Success criterion
 
