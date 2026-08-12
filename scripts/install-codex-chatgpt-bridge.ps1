@@ -5,7 +5,7 @@ param(
     [int]$PollSeconds = 30,
     [string]$TaskName = 'OpenAI Codex ChatGPT Bridge',
     [string]$SourceRepo = 'KAFKA2306/KAFKA2306',
-    [string]$SourceRef = '44c340be2fc25755626f2fa995170f149c4c87e8'
+    [string]$SourceRef = '171533652bbd7c0bd1ac5f393b3e5891fe62f2f7'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -42,7 +42,7 @@ Write-Host '[4/5] Downloading pinned public bridge files'
 $dst = Join-Path $env:TEMP ('codex-chatgpt-bridge-' + [Guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Force -Path $dst | Out-Null
 try {
-    foreach ($name in @('install.ps1', 'bridge-daemon.ps1', 'bridge-supervisor.ps1')) {
+    foreach ($name in @('install.ps1', 'bridge-daemon.ps1', 'bridge-supervisor.ps1', 'send-task.ps1')) {
         $uri = "https://raw.githubusercontent.com/$SourceRepo/$SourceRef/scripts/codex-chatgpt-bridge/$name"
         Invoke-WebRequest -UseBasicParsing -Uri $uri -OutFile (Join-Path $dst $name)
     }
