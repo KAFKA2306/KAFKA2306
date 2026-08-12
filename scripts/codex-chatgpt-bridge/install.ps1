@@ -141,6 +141,8 @@ Remove-Item -LiteralPath $smokeRepo -Recurse -Force -ErrorAction SilentlyContinu
 New-Item -ItemType Directory -Force -Path $smokeRepo | Out-Null
 & $git.Source -C $smokeRepo init | Out-Null
 if ($LASTEXITCODE -ne 0) { throw 'git init for smoke test failed.' }
+& $git.Source -C $smokeRepo -c 'user.name=Codex Bridge Smoke' -c 'user.email=codex-bridge-smoke@localhost' commit --allow-empty -m 'smoke baseline' | Out-Null
+if ($LASTEXITCODE -ne 0) { throw 'git commit for smoke test failed.' }
 
 $taskId = 'smoke-' + (Get-Date -Format 'yyyyMMdd-HHmmss') + '-' + [Guid]::NewGuid().ToString('N').Substring(0, 8)
 $spec = [ordered]@{
