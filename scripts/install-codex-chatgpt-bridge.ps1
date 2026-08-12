@@ -5,7 +5,7 @@ param(
     [int]$PollSeconds = 30,
     [string]$TaskName = 'OpenAI Codex ChatGPT Bridge',
     [string]$SourceRepo = 'KAFKA2306/KAFKA2306',
-    [string]$SourceRef = '171533652bbd7c0bd1ac5f393b3e5891fe62f2f7'
+    [string]$SourceRef = '23640ccec32355cad91bb7cfeed34845db54824c'
 )
 
 $ErrorActionPreference = 'Stop'
