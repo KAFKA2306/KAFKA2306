@@ -1,7 +1,8 @@
 param(
     [Parameter(Mandatory = $true)][string]$Prompt,
     [string]$Cwd = (Get-Location).Path,
-    [ValidateSet('read-only', 'workspace-write')][string]$Sandbox = 'read-only'
+    [ValidateSet('read-only', 'workspace-write')][string]$Sandbox = 'read-only',
+    [ValidateSet('youtube_music')][string[]]$Mcp = @()
 )
 
 $ErrorActionPreference = 'Stop'
@@ -30,11 +31,15 @@ if (-not $underRoot) { throw "Cwd is outside configured allowed_root: $allowedRo
 if ($LASTEXITCODE -ne 0) { throw 'GitHub CLI is not authenticated. Run: gh auth login' }
 
 $taskId = 'task-' + (Get-Date -Format 'yyyyMMdd-HHmmss') + '-' + [Guid]::NewGuid().ToString('N').Substring(0, 8)
-$spec = [ordered]@{
+$taskSpec = [ordered]@{
     cwd = $cwdResolved
     sandbox = $Sandbox
     prompt = $Prompt
-} | ConvertTo-Json -Compress
+}
+if ($Mcp.Count -gt 0) {
+    $taskSpec.mcp = @($Mcp)
+}
+$spec = $taskSpec | ConvertTo-Json -Compress
 
 $fence = '```'
 $body = @(
@@ -59,4 +64,5 @@ finally {
 Write-Host "Queued: $taskId"
 Write-Host "Queue: https://github.com/$($config.repo)/issues/$($config.issue)"
 Write-Host "Sandbox: $Sandbox"
+Write-Host "MCP: $(if ($Mcp.Count -gt 0) { $Mcp -join ',' } else { 'none' })"
 Write-Host "Cwd: $cwdResolved"
