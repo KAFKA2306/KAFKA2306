@@ -58,7 +58,7 @@ Codex に触らせてよい親ディレクトリへ移動してから PowerShell
 ```powershell
 $bootstrap = Join-Path $env:TEMP 'install-codex-chatgpt-bridge.ps1'
 Invoke-WebRequest -UseBasicParsing `
-  -Uri 'https://raw.githubusercontent.com/KAFKA2306/KAFKA2306/815bcb8ae7086cc4eb558be73d5f0a1b469d788a/scripts/install-codex-chatgpt-bridge.ps1' `
+  -Uri 'https://raw.githubusercontent.com/KAFKA2306/KAFKA2306/7405e79a2f15d38c455d652e3f91f2b04269b42a/scripts/install-codex-chatgpt-bridge.ps1' `
   -OutFile $bootstrap
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File $bootstrap
 ```
@@ -72,7 +72,7 @@ installer は次を行います。
 5. daemon / supervisor / task sender を `%LOCALAPPDATA%\OpenAI\CodexChatGPTBridge` に配置
 6. logon Scheduled Task を登録
 7. bridge を起動
-8. read-only smoke task を投入
+8. baseline commit を持つ temporary Git repository で read-only smoke task を投入
 9. worker の `BRIDGE_OK` + `exit_code: 0` を確認
 
 smoke test が通らない場合、installer は成功扱いにせず停止します。
