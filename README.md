@@ -1,15 +1,41 @@
 # KAFKA2306
 
-実際に使うデータ、作業、記録、判断を、後から検証・再利用できる形へ変えるためのソフトウェアを作っています。
-
-主な対象は、投資・企業分析、個人財務、VRChat、旅行、3Dアバター、画像生成、AIエージェント運用です。単発のデモより、**出典、データ、処理、成果物、公開状態、失敗履歴を追跡できる仕組み**を重視しています。
+実際に使うデータ、作業、記録、判断を、**後から根拠・状態・失敗まで追えて、もう一度使える形**へ変えるソフトウェアを作っています。
 
 <!-- ユーザー指定のプロフィール画像。README更新時も削除しないこと。 -->
 <img width="1024" height="1024" alt="KAFKA2306 profile image" src="https://github.com/user-attachments/assets/e3cf75d9-a049-416a-943c-5f81bfa60c8d" />
 
-> **主要言語:** Python / TypeScript / JavaScript / SQL / C# / PowerShell  
-> **主な環境:** Windows 11 / WSL2 / GitHub Actions / Cloudflare / GitHub Pages / Blender / Unity  
-> **運用方針:** READMEは人間向け、AGENTS.mdはAIエージェント向け、重要な作業状態はGitHubへ記録
+## Vision
+
+多数のRepositoryを作ること自体が目的ではありません。投資、個人財務、VRChat、旅行、3D制作、ゲーム、AIエージェント運用で生まれる情報を、**「なぜそう判断したか」「今どの状態か」「どこまで信じて使えるか」まで再確認できるプロダクト**へ変えることを目指しています。
+
+## Design philosophy
+
+- 技術の新しさより、利用者が何を判断しやすくなるかを優先する
+- 「動いた」だけで終わらせず、出典・入力・処理・成果物・公開状態を追跡できるようにする
+- 実績、予測、推定、AI生成、人間判断を同じ事実として混ぜない
+- 不明、未検証、失敗を正常値で埋めない
+- public / private、canonical / snapshot、current / legacy を分ける
+- automationは確認可能性を減らすためではなく、手戻りを減らすために使う
+
+## Why / 差別化
+
+差別化をPython、TypeScript、Unity、AIエージェントなどの技術stackそのものには置いていません。
+
+共通して重視しているのは、便利なoutputを作るだけでなく、**そのoutputがどこから来て、どの状態で、どこまで信じて使えるかをUXとして見せること**です。
+
+## Start here
+
+| やりたいこと | 入口 |
+|---|---|
+| 投資・企業研究 | [investor](https://github.com/KAFKA2306/investor) · [investor2](https://github.com/KAFKA2306/investor2) · [semiconductor-earnings-model](https://github.com/KAFKA2306/semiconductor-earnings-model) |
+| 個人財務 | [WealthAudit](https://github.com/KAFKA2306/WealthAudit) |
+| VRChat・3D | [vlog](https://github.com/KAFKA2306/vlog) · [vrc_cast_event_calender](https://github.com/KAFKA2306/vrc_cast_event_calender) · [image2outfit](https://github.com/KAFKA2306/image2outfit) |
+| 旅行 | [travel](https://github.com/KAFKA2306/travel) |
+| ゲーム・趣味 | [rule-scribe-games](https://github.com/KAFKA2306/rule-scribe-games) · [game-library-dashboard](https://github.com/KAFKA2306/game-library-dashboard) · [furuyoni](https://github.com/KAFKA2306/furuyoni) |
+| コンテンツ・AI運用 | [articles](https://github.com/KAFKA2306/articles) · [prompt-vault](https://github.com/KAFKA2306/prompt-vault) · [agent-resources](https://github.com/KAFKA2306/agent-resources) |
+
+> **運用方針:** READMEは人間向けの正準入口。重要な作業状態はIssue、PR、commit、CI、公開URL、一次情報へ接続します。
 
 ---
 
