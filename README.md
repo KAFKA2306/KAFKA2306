@@ -38,5 +38,3 @@ https://kafkafinancialgroup.hatenablog.com/
 ## Repository boundary
 
 このrepositoryの責務はGitHubプロフィールの入口だけです。portfolioの状態管理は各owner repository、GitHub、deployment、productionへ置きます。
-
-`scripts/` はローカルutilityであり、プロフィール本文の正準情報ではありません。
