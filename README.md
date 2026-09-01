@@ -17,7 +17,7 @@ https://kafkafinancialgroup.hatenablog.com/
 - Semiconductor earnings models: https://github.com/KAFKA2306/semiconductor-earnings-model
 - Personal finance: https://github.com/KAFKA2306/WealthAudit
 - Human memory: https://github.com/KAFKA2306/vlog
-- VR events: https://github.com/KAFKA2306/vrc_cast_event_calender
+- VR events: https://github.com/KAFKA2306/cast_event_cal
 - Image to outfit: https://github.com/KAFKA2306/image2outfit
 - Board-game rules/data: https://github.com/KAFKA2306/rule-scribe-games
 - Game library: https://github.com/KAFKA2306/game-library-dashboard
